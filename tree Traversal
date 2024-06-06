@@ -1,0 +1,38 @@
+void preOrderTraversal(Node *root) {
+
+  if (root == NULL) {
+    return;
+  }
+  cout << root->data << " ";
+  preOrderTraversal(root->left);
+  preOrderTraversal(root->right);
+}
+
+
+
+
+
+//Inorder traversal
+void InOrderTraversal(Node *root) {
+
+  if (root == NULL) {
+    return;
+  }
+
+  InOrderTraversal(root->left);
+  cout << root->data << " ";
+  InOrderTraversal(root->right);
+}
+
+
+// post order traversal
+void PostOrderTraversal(Node *root) {
+
+  if (root == NULL) {
+    return;
+  }
+
+  PostOrderTraversal(root->left);
+  PostOrderTraversal(root->right);
+  cout << root->data << " ";
+}

@@ -1,0 +1,10 @@
+int maxDepth(TreeNode* root) {
+         
+         if(root == NULL) return 0;
+
+         int lefthight = maxDepth(root->left);
+         int righthight = maxDepth(root->right);
+         int ans = max(lefthight,righthight)+1;
+
+         return ans;
+    }
